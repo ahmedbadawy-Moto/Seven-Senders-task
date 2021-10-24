@@ -140,15 +140,6 @@ resource "aws_lb_target_group_attachment" "webserver_alb_target_group_attachment
   port             = 80
 }
 
-/*
-resource "aws_lb_target_group_attachment" "webserver_alb_target_group_attachment2" {
-  count            = var.my_count
-  target_group_arn = "${aws_lb_target_group.webserver_lb_target_group.arn}"
-  target_id        = aws_instance.Apache_EC2[1].id
-  port             = 80
-}
-*/
-
 # Create application Load Balancer
 
 resource "aws_lb" "webserver_alb" {
